@@ -46,6 +46,7 @@ SELECT type, COUNT(*) AS Total
 FROM netflix
 GROUP BY type  ;
 ```
+![Ans1](https://github.com/DhananjayPimple/netflix_sql_project/blob/main/Query%20Sol'n%20Snapshots/Q1.png?raw=true)
 
 ### 2. Find the most common rating given to Movies and TV Shows.
 
@@ -61,6 +62,7 @@ FROM
 
 WHERE sub.drn = 1  ;
 ```
+![Ans2](https://github.com/DhananjayPimple/netflix_sql_project/blob/main/Query%20Sol'n%20Snapshots/Q2.png?raw=true)
 
 ### 3. Filter out all the data related to Movies released in a specific year. (e.g. 2020)
 
@@ -69,6 +71,7 @@ SELECT *
 FROM netflix
 WHERE type = 'Movie' AND release_year = 2020 ;
 ```
+![Ans3](https://github.com/DhananjayPimple/netflix_sql_project/blob/main/Query%20Sol'n%20Snapshots/Q3.png?raw=true)
 
 ### 4. Find the top 5 countries according to the amount of content present on Netflix.
 
@@ -103,6 +106,7 @@ GROUP BY 1
 ORDER BY 2 DESC  
 LIMIT 5  ;
 ```
+![Ans4](https://github.com/DhananjayPimple/netflix_sql_project/blob/main/Query%20Sol'n%20Snapshots/Q4.png?raw=true)
 
 ### 5. Identify the top 5 movies with the longest duration on the platform.
 
@@ -114,6 +118,7 @@ GROUP BY 1, 2
 ORDER BY 2 DESC
 LIMIT 5  ;
 ```
+![Ans5](https://github.com/DhananjayPimple/netflix_sql_project/blob/main/Query%20Sol'n%20Snapshots/Q5.png?raw=true)
 
 ### 6. Find all the content added in the last 5 years.
 
@@ -122,6 +127,7 @@ SELECT *
 FROM netflix 
 WHERE TO_DATE(date_added, 'Month DD, YYYY') >= CURRENT_DATE - INTERVAL '5 YEARS' ;
 ```
+![Ans6](https://github.com/DhananjayPimple/netflix_sql_project/blob/main/Query%20Sol'n%20Snapshots/Q6.png?raw=true)
 
 ### 7. Find all the Movies/TV Shows directed by a particular director. (e.g. Rajiv Chilaka)
 
@@ -130,6 +136,7 @@ SELECT *
 FROM netflix
 WHERE director LIKE '%Rajiv Chilaka%'  ;
 ```
+![Ans7](https://github.com/DhananjayPimple/netflix_sql_project/blob/main/Query%20Sol'n%20Snapshots/Q7.png?raw=true)
 
 ### 8. List all the TV Shows with more than 5 seasons.
 
@@ -138,6 +145,7 @@ SELECT *
 FROM netflix
 WHERE type = 'TV Show' AND SPLIT_PART(duration, ' ',1)::numeric > 5  ;
 ```
+![Ans8](https://github.com/DhananjayPimple/netflix_sql_project/blob/main/Query%20Sol'n%20Snapshots/Q8.png?raw=true)
 
 ### 9. Count the number of Movies/TV Shows present in each genre.
 
@@ -148,6 +156,7 @@ FROM netflix
 GROUP BY 1
 ORDER BY 2 DESC  ;
 ```
+![Ans9](https://github.com/DhananjayPimple/netflix_sql_project/blob/main/Query%20Sol'n%20Snapshots/Q9.png?raw=true)
 
 ### 10. Find each year and the average number of content released by India on Netflix.
 ###	    Return top five 5 years with the highest number of average content releases.
@@ -162,6 +171,7 @@ FROM netflix
 WHERE country = 'India'
 GROUP BY 1  ;
 ```
+![Ans10](https://github.com/DhananjayPimple/netflix_sql_project/blob/main/Query%20Sol'n%20Snapshots/Q10.png?raw=true)
 
 ### 11. List all the movies that are Documentaries.
 
@@ -170,6 +180,7 @@ SELECT title, listed_in
 FROM netflix
 WHERE listed_in ILIKE '%Documentaries'  ;
 ```
+![Ans11](https://github.com/DhananjayPimple/netflix_sql_project/blob/main/Query%20Sol'n%20Snapshots/Q11.png?raw=true)
 
 ### 12. Find all the content on the platform that is without a director.
 
@@ -178,6 +189,7 @@ SELECT *
 FROM netflix
 WHERE director IS NULL  ;
 ```
+![Ans12](https://github.com/DhananjayPimple/netflix_sql_project/blob/main/Query%20Sol'n%20Snapshots/Q12.png?raw=true)
 
 ### 13. Find in how many movies, actor 'Salman Khan' has appeared in the last 10 Years.
 
@@ -187,6 +199,7 @@ FROM netflix
 WHERE casts LIKE '%Salman Khan%' AND 
 release_year > EXTRACT(YEAR FROM CURRENT_DATE) - 10   ;
 ```
+![Ans13](https://github.com/DhananjayPimple/netflix_sql_project/blob/main/Query%20Sol'n%20Snapshots/Q13.png?raw=true)
 
 ### 14. Find the top 10 actor/actress who appears most in Movies produced in India.
 
@@ -199,6 +212,7 @@ GROUP BY 1
 ORDER BY 2 DESC
 LIMIT 10  ;
 ```
+![Ans14](https://github.com/DhananjayPimple/netflix_sql_project/blob/main/Query%20Sol'n%20Snapshots/Q14.png?raw=true)
 
 ### 15. Categorize the content based on the presence of the keywords 'kill' and 'violence as Only For Adults and if not as Unrestricted. 
 ###     Count the number of items for each category.
@@ -218,6 +232,7 @@ SELECT category, COUNT(*) AS total_content
 FROM CTE
 GROUP BY 1  ;
 ```
+![Ans15](https://github.com/DhananjayPimple/netflix_sql_project/blob/main/Query%20Sol'n%20Snapshots/Q15.png?raw=true)
 
 ## Findings and Conclusion
 
