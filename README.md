@@ -1,23 +1,17 @@
 # Netflix Movies And TV Shows Dataset Analysis Using SQL
 ![Netflix Logo](https://github.com/DhananjayPimple/netflix_sql_project/blob/main/netflix-logo)
 
-## Overview
+## 📖 Overview
 This project involves a comprehensive analysis of Netflix's movies and TV shows data using SQL. The goal is to extract valuable insights and answer various business questions based on the dataset. The following README provides a detailed account of the project's objectives, business problems, solutions, findings, and conclusions.
 
-## Objectives
+## 🎯 Objectives
 
 - Analyze the distribution of content types (movies vs TV shows).
 - Identify the most common ratings for movies and TV shows.
 - List and analyze content based on release years, countries, and durations.
 - Explore and categorize content based on specific criteria and keywords.
 
-## Dataset
-
-The data for this project is sourced from the Kaggle dataset:
-
-- **Dataset Link:** [Movies Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download)
-
-## Schema
+## 🛢 Schema
 
 ```sql
 CREATE TABLE netflix
@@ -37,7 +31,7 @@ CREATE TABLE netflix
 );
 ```
 
-## Business Problems and Solutions
+## 💡 Business Problems and Solutions
 
 ### 1. Calculate the total number of Movies & T.V. shows available on the platform.
 
@@ -234,7 +228,7 @@ GROUP BY 1  ;
 ```
 ![Ans15](https://github.com/DhananjayPimple/netflix_sql_project/blob/main/Query%20Sol'n%20Snapshots/Q15.png?raw=true)
 
-## Findings and Conclusion
+##  ✅ Findings and Conclusion
 
 - **Content Distribution:** The dataset contains a diverse range of movies and TV shows with varying ratings and genres.
 - **Common Ratings:** Insights into the most common ratings provide an understanding of the content's target audience.
@@ -243,6 +237,11 @@ GROUP BY 1  ;
 
 This analysis provides a comprehensive view of Netflix's content and can help inform content strategy and decision-making.
 
+## 📂 Dataset
+
+The data for this project is sourced from the Kaggle dataset:
+
+- **Dataset Link:** [Movies Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download)
 
 
 
